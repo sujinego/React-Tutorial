@@ -1,5 +1,5 @@
 ## Management System
-
+프로젝트 기능 : 고객 정보관리 기능 시스템 
 
 # Getting Started with Create React App
 
