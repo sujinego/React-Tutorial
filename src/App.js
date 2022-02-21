@@ -1,15 +1,40 @@
 import React, { Component} from 'react';
-import logo from './logo.svg';
+import Customer from './components/Customer';
 import './App.css';
 
-function App() {
- 
+
+
+const customers = [
+  {
+  'id':1,
+  'name': '송강',
+  'birth': '9401206',
+  'gender': '남자',
+  'job': '배우'
+},
+{
+  'id':2,
+  'name': '한효주',
+  'birth': '9401206',
+  'gender': '남자',
+  'job': '배우'
+}, {
+  'id':3,
+  'name': '김고은',
+  'birth': '9401206',
+  'gender': '남자',
+  'job': '배우'
+}
+]
+
+class App extends Component{
+  render() {
     return (
-      <div className="gray-background">
-        <img src={logo} lat="logo" />
+      <div>
+        { customers.map(c => {return (<Customer key={c.id} id={c.id} name={c.name} birth={c.birth} gender={c.gender} job={c.job} />); }) }
       </div>
     );
   }
-
+}
 
 export default App;
